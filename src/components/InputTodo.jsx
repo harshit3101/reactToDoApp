@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import { FaPlusCircle } from "react-icons/fa"
 
 const InputTodo = props => {
 
@@ -27,13 +27,12 @@ const InputTodo = props => {
         }else{
             alert("Empty Input Not Allowed!!")
         }
-    }}>
-        <input type="text" placeholder="Add Todo..." name="desc" value={inputTodo.desc} onChange={inputHandler}/>
-        <button>Submit</button>
+    }} className="form-container">
+        <input type="text" placeholder="Add Todo..." name="desc" value={inputTodo.desc} onChange={inputHandler} className="input-text"/>
+        <button className="input-submit"><FaPlusCircle /></button>
     </form>
   )
 }
 
-InputTodo.propTypes = {}
 
 export default InputTodo
